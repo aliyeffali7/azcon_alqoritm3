@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fayl Yüklə</title>
+</head>
+<body>
+  <h2>Excel faylınızı yükləyin</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="excel_file" required>
+    <button type="submit">Göndər və Hesabla</button>
+  </form>
+</body>
+</html>
