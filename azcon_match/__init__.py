@@ -1,3 +1,2 @@
-# AzerCon matcher package
-# azcon_match/__init__.py
+# AzerCon matcher package (patched)
 from .diagnostics import trace, compare
