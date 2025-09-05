@@ -11,7 +11,7 @@ def _normalize_unit(u:str)->str:
     return {"m²":"m(2)","m2":"m(2)","m(2)":"m(2)","m":"m","metr":"m","pm":"m","əd":"ədəd","ed":"ədəd","eded":"ədəd","ədəd":"ədəd","ton":"ton"}.get(u,u)
 def score_row(q_tok:set,s_tok:set,q:str,s:str)->int:
     score=fuzz.token_set_ratio(q,s)
-    if any((c in q_tok)^(c in s_tok) for c in pp.CRITICAL): score=int(score*0.70)
+    if any((c in q_tok)^(c in s_tok) for c in pp.CRITICAL): score=int(score*0.80)
     return score
 def find_matches(query_raw:str, query_flag:str, query_unit:str, master_df:pd.DataFrame)->Dict[str,Any]:
     from .data_loader import normalize_flag, normalize_unit
